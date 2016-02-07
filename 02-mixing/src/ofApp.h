@@ -7,11 +7,11 @@ class ofApp : public ofBaseApp{
 
 public:
     void setup();
-    void mouseMoved(int x, int y );
     void audioOut(ofSoundBuffer& buffer);
-    
-    maxiOsc osc;
+		
+    maxiOsc osc, panner, freqMod;
+    maxiMix mix;
+    double outputs[2];
     double frequency, currentSample;
     unsigned bufferSize, sampleRate;
-		
 };
