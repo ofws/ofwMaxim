@@ -1,6 +1,6 @@
 #include "ofApp.h"
 void ofApp::setup(){
-    sample.load(ofToDataPath("boxing_bell.wav"));
+    sample.load(ofToDataPath("5.wav"));
     sampleRate = 44100;
     bufferSize = 512;
     ofSoundStreamSetup(2,0,this,sampleRate,bufferSize,4);
