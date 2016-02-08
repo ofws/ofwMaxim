@@ -38,23 +38,11 @@ void ofApp::draw(){
         (*it)->render(current);
     }
 }
-void ofApp::keyPressed(int key){}
-void ofApp::keyReleased(int key){}
-void ofApp::mouseMoved(int x, int y ){}
-void ofApp::mouseDragged(int x, int y, int button){}
 void ofApp::mousePressed(int x, int y, int button){
     unsigned yPos = floor((float) y / (stepSize + gap));
     unsigned xPos = floor((float) x / ofGetWidth()*stepAmount);
     seqs[yPos]->steps[xPos].pressed();
-    
 }
-void ofApp::mouseReleased(int x, int y, int button){}
-void ofApp::mouseEntered(int x, int y){}
-void ofApp::mouseExited(int x, int y){}
-void ofApp::windowResized(int w, int h){}
-void ofApp::gotMessage(ofMessage msg){}
-void ofApp::dragEvent(ofDragInfo dragInfo){}
-
 void ofApp::audioOut(ofSoundBuffer &buffer){
     for (unsigned i =0; i<bufferSize; i++){
         currentSample = 0;
